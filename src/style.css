@@ -1,0 +1,58 @@
+:root{
+    --dark-blue: #002FFF;
+    --light-blue: #72d9ff;
+    --dark-white: #f7f7f7;
+    --light-white: #ffffff;
+    --black: #272727;
+
+    --blue-gradient: linear-gradient(80deg, #2f80ff 0%, #3ccbff 100%);
+    --red-gradient: linear-gradient(80deg, #db2044 0%, #e233b8 100%)
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+header.searchBar{
+    background-image: var(--blue-gradient);
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+}
+
+header.searchBar > form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+header.searchBar > form > input#TaskInput{
+    padding: 5px;
+    width: 40vw;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid #c5c5c5;
+}
+
+header.searchBar > form > input#TaskInput:focus{
+    outline: none;
+}
+
+header.searchBar > form > input[type="submit"]{
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-image: var(--red-gradient);
+    color: var(--light-white);
+}
+
