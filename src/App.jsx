@@ -3,7 +3,7 @@ import React from 'react'
 import { GlobalContext } from './context';
 
 import AddTask from './component/AddTask';
-import Date from './component/Date';
+import DateComp from './component/DateComp';
 import TodoModal from './component/TodoModal';
 
 import './style.css'
@@ -12,8 +12,8 @@ const App = () => {
 
     return (
         <>
+            <DateComp />
             <AddTask />
-            <Date />
             {/* <TodoModal /> */}
         </>
     )

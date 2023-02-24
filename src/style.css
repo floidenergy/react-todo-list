@@ -4,6 +4,9 @@
     --dark-white: #f7f7f7;
     --light-white: #ffffff;
     --black: #272727;
+    --dark-red: #db2044;
+    --light-pink: #e233b8;
+
 
     --blue-gradient: linear-gradient(80deg, #2f80ff 0%, #3ccbff 100%);
     --red-gradient: linear-gradient(80deg, #db2044 0%, #e233b8 100%)
@@ -17,10 +20,85 @@
     font-family: 'Poppins';
 }
 
-header.searchBar{
+
+/****************** date components ***************************/
+
+div.DateTime{
     background-image: var(--blue-gradient);
     width: 100vw;
-    height: 40vh;
+    /* height: 20vh; */
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: var(--black);
+    color: white;
+    padding: 25px 50px;
+}
+
+div.DateTime > .dateSection{
+    display: grid;
+    /* column-gap: 10px; */
+    grid-template-columns: 0.5fr 0.1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+}
+
+div.DateTime > .dateSection > .date{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 6rem;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    color: var(--dark-red);
+    -webkit-text-stroke: 1px var(--light-white);
+}
+
+div.DateTime > .dateSection > .day{
+    writing-mode: vertical-rl;
+    /* transform: rotate(180deg); */
+    font-size: 1.7rem;
+    padding: 0;
+    padding-top: 20px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    font-weight: 600;
+}
+
+div.DateTime > .dateSection > .month{
+    font-size: 3rem;
+    color: var(--dark-white);
+    padding-bottom: -10px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+div.DateTime > .dateSection > .year{
+    font-size: 2rem;
+    font-weight: 600;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+div.DateTime > .time{
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    gap: 5px;
+    font-weight: 600;
+    font-size: 5rem;
+
+}
+
+/****************** add Task components ***************************/
+
+
+header.searchBar{
+    /* background-image: var(--blue-gradient); */
+    width: 100vw;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,4 +133,3 @@ header.searchBar > form > input[type="submit"]{
     background-image: var(--red-gradient);
     color: var(--light-white);
 }
-
