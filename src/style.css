@@ -1,7 +1,7 @@
 :root{
     --dark-blue: #002FFF;
     --light-blue: #72d9ff;
-    --dark-white: #f7f7f7;
+    --dark-white: #f3f3f3;
     --light-white: #ffffff;
     --black: #272727;
     --dark-red: #db2044;
@@ -95,8 +95,7 @@ div.DateTime > .time{
 /****************** add Task components ***************************/
 
 
-header.searchBar{
-    /* background-image: var(--blue-gradient); */
+/* header.addTaskSection{
     width: 100vw;
     height: 10vh;
     display: flex;
@@ -105,14 +104,14 @@ header.searchBar{
     color: var(--black);
 }
 
-header.searchBar > form{
+header.addTaskSection > form{
     display: flex;
     justify-content: center;
     gap: 10px;
     align-items: center;
 }
 
-header.searchBar > form > input#TaskInput{
+header.addTaskSection > form > input#TaskInput{
     padding: 5px;
     width: 40vw;
     border-radius: 10px;
@@ -121,15 +120,149 @@ header.searchBar > form > input#TaskInput{
     border: 1px solid #c5c5c5;
 }
 
-header.searchBar > form > input#TaskInput:focus{
+header.addTaskSection > form > input#TaskInput:focus{
     outline: none;
 }
 
-header.searchBar > form > input[type="submit"]{
+header.addTaskSection > form > input[type="submit"]{
     padding: 5px 15px;
     font-size: 1.2rem;
     border-radius: 10px;
     border: none;
     background-image: var(--red-gradient);
     color: var(--light-white);
+} */
+
+.addTaskSection{
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    bottom: 25px;
+    right: 25px;
+}
+
+.addTaskSection > button.addTaskButton{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--dark-red)
+}
+
+.addTaskSection > form {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    gap: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: var(--dark-white);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.addTaskSection > form > #TaskInput{
+    width: 300px;
+    font-size: 1.2rem;
+    background-color: var(--light-white);
+    /* background-color: white; */
+    border: none;
+    padding: 5px;
+}
+
+.addTaskSection > form > input[type="text"]:focus{
+    outline: none;
+}
+
+.addTaskSection > form > textarea#description{
+    /* min-height: max-content; */
+    
+    font-size: 1rem;
+    text-align:start;
+    border: none;
+    /* outline: none; */
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.addTaskSection > form > input[type='submit']{
+    width: max-content;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-image: var(--red-gradient);
+    color: var(--light-white);
+    font-weight: 600;
+    font-size: 1rem;
+    float: left;
+}
+
+.addTaskSection > form > input#taskColor{
+    width: 100%;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+/****************************** task card **********************/
+
+div.Todo-Modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-white) ;
+    /* margin: auto; */
+    /* margin-top: 25px; */
+    padding: 15px;
+}
+
+div.Todo-Modal > div.TaskCard{
+    overflow: hidden;
+    max-height: 80px;
+    width: 80vw;
+    /* height: 80px; */
+    margin: auto;
+    padding: 5px;
+    border-radius: 0 8px 8px 0;
+    background-color: var(--light-white);
+    display: flex;
+    justify-content: space-between;
+    /* border-left: 4px solid black; */
+}
+
+div.Todo-Modal > div.TaskCard > .info > .taskName {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--black)
+}
+
+div.Todo-Modal > div.TaskCard > .info > .taskDescription{
+    font-size: 1rem;   
+}
+
+div.Todo-Modal > div.TaskCard > .info2{
+    position: relative;
+
+}
+
+div.Todo-Modal > div.TaskCard > .info2 > .doneButton {
+    height: 50px;
+    width: 60px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--light-blue);
+    color: white;
+    border-radius: 0% 0 0% 100%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+div.Todo-Modal > div.TaskCard > .info2 > .taskDate{
+    padding-right: 60px;
+    color: gray;
 }

@@ -1,4 +1,4 @@
-import React, {createContext, useContext} from "react"
+import React, {useState, createContext, useContext} from "react"
 
 const Context = createContext();
 
@@ -7,7 +7,16 @@ export const GlobalContext = () => {
 }
 
 export const AppProvider = ({children}) => {
-    return <Context.Provider value={{name:"hello"}}>
+    const [Tasks, setTasks] = useState([{
+        "Name": "booommm bastic",
+        "Description": "chakabom\n\n",
+        "Time": "2023-02-26T02:01:55.127Z",
+        "Color": "#198f9f",
+        "Done": false
+    }]);
+
+
+    return <Context.Provider value={{Tasks, setTasks}}>
         {children}
     </Context.Provider>
 }
