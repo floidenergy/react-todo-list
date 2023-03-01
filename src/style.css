@@ -215,10 +215,17 @@ div.Todo-Modal {
     background-color: var(--dark-white) ;
     /* margin: auto; */
     /* margin-top: 25px; */
+    /* gap: 10px; */
+
     padding: 15px;
 }
 
-div.Todo-Modal > div.TaskCard{
+div.Todo-Modal > .taskBorder{
+    display: flex;
+    justify-content: space-around0;
+}
+
+div.Todo-Modal > .taskBorder > div.TaskCard{
     overflow: hidden;
     max-height: 80px;
     width: 80vw;
@@ -229,26 +236,27 @@ div.Todo-Modal > div.TaskCard{
     background-color: var(--light-white);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
     /* border-left: 4px solid black; */
 }
 
-div.Todo-Modal > div.TaskCard > .info > .taskName {
+div.Todo-Modal > .taskBorder > div.TaskCard > .info > .taskName {
     font-weight: 600;
     font-size: 1.2rem;
     text-transform: capitalize;
     color: var(--black)
 }
 
-div.Todo-Modal > div.TaskCard > .info > .taskDescription{
+div.Todo-Modal > .taskBorder > div.TaskCard > .info > .taskDescription{
     font-size: 1rem;   
 }
 
-div.Todo-Modal > div.TaskCard > .info2{
+div.Todo-Modal > .taskBorder > div.TaskCard > .info2{
     position: relative;
 
 }
 
-div.Todo-Modal > div.TaskCard > .info2 > .doneButton {
+div.Todo-Modal > .taskBorder > div.TaskCard > .info2 > .doneButton {
     height: 50px;
     width: 60px;
     border: none;
@@ -262,7 +270,7 @@ div.Todo-Modal > div.TaskCard > .info2 > .doneButton {
     right: -10px;
 }
 
-div.Todo-Modal > div.TaskCard > .info2 > .taskDate{
+div.Todo-Modal > .taskBorder > div.TaskCard > .info2 > .taskDate{
     padding-right: 60px;
     color: gray;
 }

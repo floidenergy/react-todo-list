@@ -20,15 +20,18 @@ const AddTask = () => {
                         e.preventDefault()
                         const timeNow = new Date()
 
-                        // timeNow.getDay();
+                        const taskId = Tasks.length !== 0 ? Tasks.at(Tasks.lenghth - 1).id + 1 : 1;
 
                         setTasks([
                             ...Tasks,
-                            { Name: TaskName, Description: taskDescription, Time: timeNow, Color: taskColor, Done: false }
+                            { id: taskId, Name: TaskName, Description: taskDescription, Time: timeNow, Color: taskColor, Done: false }
                         ])
+
                         setTaskName('')
                         setTaskDescription('')
                         setTaskColor('#ff0000')
+                        setIsAddTask(false);
+
                     }}
                 >
                     <input
@@ -38,6 +41,7 @@ const AddTask = () => {
                         required
                         placeholder='Add A Task'
                         value={TaskName}
+                        autoFocus
                         onChange={e => {
                             setTaskName(e.target.value)
                         }}
